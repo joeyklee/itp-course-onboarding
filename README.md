@@ -15,17 +15,33 @@ The goal is also to incorporate some of the handy tips and insights that faculty
 
 - [Advice to Adjuncts](http://facultyhelp.itp.nyu.edu/advice-to-adjuncts)
 - [ITP Make a Syllabus](http://facultyhelp.itp.nyu.edu/syllabus-template)
+- [ITP Faculty Discussion on Syllabi](https://docs.google.com/document/d/1lGkoWRffV4py3DJqFzB0vOhmPrHs-N9KWiqV7yonWtA/edit)
 - [Accessibility Guidelines](http://facultyhelp.itp.nyu.edu/accessibility)
-  - [General Web Developer Toolkit for Accessibility](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/websites/website-accessibility-for-developers.html) - important if you're developing a custom site
+  - [Powerpoint presentation on Accessibility](https://docs.google.com/presentation/d/1q8K4CXHxoBpRxwUON4x8q8LRRZzM2kLDwXJt5VVM2I4/edit#slide=id.p1)
+  - [General Web Developer Toolkit for Accessibility](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/websites/website-accessibility-for-developers.html) - important when you're developing a custom site
   - [On Images](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/websites/images-and-alt-text.html)
   - [On Video & Audio](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/video-and-audio.html)
-  - [On Documents]()
+  - [On Documents](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online.html)
     - [Word Docs](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/microsoft-word.html)
-    - [Ppt](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/Powerpoint.html)
+    - [Powerpoint](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/Powerpoint.html)
     - [PDF](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/adobe-pdf.html)
     - [Google Docs](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/google-docs.html)
     - [Google Slides](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/google-slides.html)
     - [InDesign](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/inDesign.html)
+    - [Course Materials Generally](https://www.nyu.edu/life/information-technology/help-and-service-status/accessibility/how-to-guides/accessibility_online/course-materials.html)
+
+
+## Example Syllabus References
+
+- [Tom Igoe's Physical Computing Course](https://itp.nyu.edu/physcomp/itp/syllabus/) // Wordpress
+- [ITP Introduction to Computational Media](https://github.com/ITPNYU/ICM-2018) // Github
+- []()
+- []()
+
+
+## Tools to consider
+- [GitPrint](https://gitprint.com/)
+- 
 
 ## Setup
 
