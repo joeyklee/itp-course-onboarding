@@ -41,11 +41,41 @@ The goal is also to incorporate some of the handy tips and insights that faculty
 
 ## Tools to consider
 - [GitPrint](https://gitprint.com/)
-- 
+-
 
 ## Setup
 
-TBD
+### run `mongodb`
+
+```
+mongod
+```
+
+### `/client`
+
+```
+cd client
+npm install
+```
+
+```
+npm start
+```
+
+### `/server`
+
+```
+cd server
+npm install
+```
+
+then
+
+```
+npm start
+```
+
+
 
 ## License
 
