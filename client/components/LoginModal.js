@@ -33,16 +33,16 @@ module.exports = function(name, state, emit){
 
   return html`
     <div id="loginModal" class="dn">
-    <div class="w-100 h-100 absolute flex flex-column justify-center items-center bg-purple yellow" style="top:0; left:0">
+    <div class="w-100 h-100 absolute flex flex-column justify-center items-center bg-washed-red dark-green" style="top:0; left:0">
       <div class="w-40">
         <div class="w-100 flex flex-row items-end justify-end">
           <a class="right" onclick=${toggleLoginModal}>close</a>
         </div>
         <h3>Welcome back lovely person!</h3>
         <form class="w-100 mt1" id="login" onsubmit=${onSubmit}>
-          <input name="email" class="w-100 pa2 br2 ba b--yellow yellow bg-purple" type="email" placeholder="youremail@email.com" onkeyup=${handleChange}>
-          <input name="password" class="w-100 mt1 pa2 br2 ba b--yellow yellow bg-purple" type="password" placeholder="supersecretpassword" onkeyup=${handleChange}>
-          <input class="pa2 mt2 br2 ba b--yellow yellow bg-purple" type="submit" value="Login!">
+          <input name="email" class="w-100 pa2 br2 ba b--dark-green dark-green bg-washed-red" type="email" placeholder="youremail@email.com" onkeyup=${handleChange}>
+          <input name="password" class="w-100 mt1 pa2 br2 ba b--dark-green dark-green bg-washed-red" type="password" placeholder="supersecretpassword" onkeyup=${handleChange}>
+          <input class="pa2 mt2 br2 ba b--dark-green dark-green bg-washed-red" type="submit" value="Login!">
         </form>
       </div>
     </div>

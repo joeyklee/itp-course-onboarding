@@ -13,7 +13,7 @@ module.exports = function(state, emit) {
 
 
   return html`
-    <footer class="w-100 h4 flex flex-column bg-purple pa2 yellow">
+    <footer class="w-100 h4 flex flex-column bg-washed-red pa2 dark-green">
       <div class="w-100 flex flex-row pa2 pl4">
         <div class="w-40 flex flex-column">
             <small>Doing our best to make better syllabi.</small>

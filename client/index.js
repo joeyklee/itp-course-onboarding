@@ -23,7 +23,9 @@ app.use(require('./stores/syllabus'))
 
 app.route('/', require('./views/main'))
 app.route('/auth', require('./views/auth'))
-app.route('/overview', require('./views/overview'))
+app.route('/create', require('./views/create'))
+app.route('/edit/:featureId', require('./views/edit'))
+// app.route('/overview', require('./views/overview'))
 app.route('/syllabus', require('./views/syllabus'))
 app.route('/*', require('./views/404'))
 
