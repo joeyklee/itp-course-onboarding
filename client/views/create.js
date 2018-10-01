@@ -37,9 +37,9 @@ function view (state, emit) {
   }
 
   return html`
-  <body class="code w-100 h-100 bg-navy flex flex-column items-center">
+  <body class="code w-100 h-100 bg-washed-yellow flex flex-column items-center">
     ${state.cache(NavbarTop, "NavbarTop", state, emit)}
-    <main class="w-100 h-auto mt2 mb2 pr4 pl4 yellow" style="flex-grow:1; max-width:1200px">
+    <main class="w-100 h-auto mt2 mb2 pr4 pl4 dark-blue" style="flex-grow:1; max-width:1200px">
         <h1>Create</h1>
         <ul>
           ${state.syllabi.map( (syllabus) => html`

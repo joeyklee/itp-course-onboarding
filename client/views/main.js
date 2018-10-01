@@ -41,7 +41,7 @@ function view (state, emit) {
   return html`
   <body class="code w-100 h-100 bg-washed-yellow flex flex-column items-center">
     ${state.cache(NavbarTop, "NavbarTop", state, emit)}
-    <main class="w-100 h-auto mt2 mb2 pr4 pl4 dark-green" style="flex-grow:1; max-width:1200px">
+    <main class="w-100 h-auto mt2 mb2 pr4 pl4 dark-blue" style="flex-grow:1; max-width:1200px">
         <!-- row1 -->
         <div class="w-100 h-100 flex flex-row items-center justify-center">
           <!-- left -->
@@ -51,12 +51,12 @@ function view (state, emit) {
           </div>
           <!-- right -->
           <div class="pa4 flex flex-column bg-washed-yellow w-40-l h-100 justify-center">
-            <div class="flex flex-column w-100 pa4 br2 bg-washed-dark-green dark-green">
+            <div class="flex flex-column w-100 pa4 br2 bg-washed-dark-blue dark-blue">
               <p class="f4 lh-copy">Join the community and start building!</p>
               <form class="w-100 mt1" id="signup" onsubmit=${onSubmit}>
-                <input class="w-100 pa2 br2 ba b--dark-green dark-green bg-washed-yellow" name="email" type="email" placeholder="youremail@email.com" onkeyup=${handleChange}>
-                <input class="w-100 mt1 pa2 br2 ba b--dark-green dark-green bg-washed-yellow" name="password" type="password" placeholder="supersecretpassword" onkeyup=${handleChange}>
-                <input class="pa2 mt2 br2 ba b--dark-green dark-green bg-washed-yellow" type="submit" value="Signup!">
+                <input class="w-100 pa2 br2 ba b--dark-blue dark-blue bg-washed-yellow" name="email" type="email" placeholder="youremail@email.com" onkeyup=${handleChange}>
+                <input class="w-100 mt1 pa2 br2 ba b--dark-blue dark-blue bg-washed-yellow" name="password" type="password" placeholder="supersecretpassword" onkeyup=${handleChange}>
+                <input class="pa2 mt2 br2 ba b--dark-blue dark-blue bg-washed-yellow" type="submit" value="Signup!">
               </form>
             </div>
           </div>

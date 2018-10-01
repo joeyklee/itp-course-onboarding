@@ -48,11 +48,11 @@ function store (state, emitter) {
         api.authenticate(payload).then(() => {
         // Logged in
           console.log("logged in!")
-          emitter.emit("pushState", "overview")
+          emitter.emit("pushState", "create")
         }).catch(e => {
           // Show login page (potentially with `e.message`)
           console.error('Authentication error', e);
-          emitter.emit("pushState", "auth")
+          emitter.emit("pushState", "/")
         });
       }
 
