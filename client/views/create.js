@@ -36,14 +36,22 @@ function view (state, emit) {
     emit("user:loginModal")
   }
 
+
+
   return html`
   <body class="code w-100 h-100 bg-washed-yellow flex flex-column items-center">
     ${state.cache(NavbarTop, "NavbarTop", state, emit)}
     <main class="w-100 h-auto mt2 mb2 pr4 pl4 dark-blue" style="flex-grow:1; max-width:1200px">
         <h1>Create</h1>
+        <p>
+          Here's a list of your current courses.
+        </p>
+        <div>
+          <button onclick= ${() => emit("db:add") }>Add!</button>
+        </div>
         <ul>
           ${state.syllabi.map( (syllabus) => html`
-              <li>${syllabus.title}</li>
+              <li><a href="/edit/${syllabus._id}">${syllabus.title}</a></li>
             `)}
         </ul>
       </main>

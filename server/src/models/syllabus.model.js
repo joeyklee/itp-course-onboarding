@@ -13,7 +13,8 @@ module.exports = function (app) {
     courseWebsite:{ type: String, required: true },
     officeHours:{ type: String, required: false },
     officeHoursCalendar:{ type: String, required: false },
-    courseMaterial:{type:Array, required:false}
+    courseMaterial:{type:Array, required:false},
+    userId:{ type: String, required: true }
   }, {
     timestamps: true
   });

@@ -4,11 +4,41 @@ module.exports = store
 
 
 function store (state, emitter) {
+
+  // get user's existing syllabi
   state.syllabi = [];
+
+  state.editing = {
+    syllabusId:""
+  }
+
+  // create placeholders for new Syllabus
+  state.newSyllabus = {
+    title: "",
+    description: "",
+    instructorName: "",
+    instructorUrl: "",
+    courseWebsite: "",
+    courseMaterial: []
+  }
+
 
   emitter.on('DOMContentLoaded', function () {
 
-    emitter.on("syllabus:add", function(){
+    emitter.on("db:editing", function(sid){
+      state.editing.syllabusId = sid
+
+      // api.authenticate().then(() => {
+      //   api.service("syllabus")
+      //     .find({query:{_id:sid}})
+      //     .then( response => {
+      //         console.log(response)
+      //         return response
+      //     })
+      // })
+    })
+
+    emitter.on("db:add", function(){
         console.log("add syllabus");
 
         let output = {
@@ -44,7 +74,7 @@ function store (state, emitter) {
                 return err
               });
 
-            // emitter.emit("messages:getMessages");
+            emitter.emit("db:find");
             emitter.emit(state.events.RENDER);
           })
           .catch(err => {
@@ -54,11 +84,19 @@ function store (state, emitter) {
 
     });
 
-    emitter.on("syllabus:find", function(){
+    emitter.on("db:find", function(){
+
         console.log("getting all!")
 
-        api.service("syllabus").find()
-          .then( (response) => {
+        api.authenticate().then((res) => {
+
+          // api.service("users").find().then( (res) => {
+          //   console.log("currentUser", res)
+          // })
+          console.log("currentUser", res.userId)
+          api.service("syllabus")
+            .find({query:{userId:res.userId, $limit:100} } )
+            .then( (response) => {
             console.log(response.data)
             state.syllabi = response.data;
 
@@ -68,11 +106,13 @@ function store (state, emitter) {
           }).catch(err => {
             return err
           });
+        })
+
 
           // emitter.emit(state.events.RENDER);
     });
     // immediately call
-    emitter.emit("syllabus:find")
+    emitter.emit("db:find")
 
 
   })

@@ -13,12 +13,14 @@ module.exports = function(name, state, emit){
     e.preventDefault();
     var form = e.currentTarget
     var formData = new FormData(form)
-    console.log(formData.get("email"))
-    console.log(formData.get("password"))
-    console.log("login clicked!")
-    console.log(e.target)
+    // console.log(formData.get("email"))
+    // console.log(formData.get("password"))
+    // console.log("login clicked!")
+    // console.log(e.target)
     if(e.target.id == "login"){
       emit("auth:login", formData)
+      // TODO: make sure only to redirect if auth'd
+      toggleLoginModal()
     }
 
   }

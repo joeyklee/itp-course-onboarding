@@ -11,7 +11,6 @@ function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
 
 
-
   function handleChange(e){
     // e.preventDefault();
     console.log("value changing!")
@@ -36,6 +35,7 @@ function view (state, emit) {
 
   let toggleLoginModal = function(){
     emit("user:loginModal")
+    emit("user:checkStatus")
   }
 
   return html`
@@ -47,7 +47,7 @@ function view (state, emit) {
           <!-- left -->
           <div class="pa4 flex flex-column bg-washed-yellow w-60-l h-100 justify-center">
             <h1 class="pa0 ma0 f1 lh-solid">Welcome to the ITP Syllabus Maker!</h1>
-            <p>This is an helpful tool to help you create a course syllabus for ITP program at NYU.</p>
+            <p>This is a tool to help you create a course syllabus for the ITP program at NYU.</p>
           </div>
           <!-- right -->
           <div class="pa4 flex flex-column bg-washed-yellow w-40-l h-100 justify-center">
