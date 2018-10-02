@@ -6,12 +6,11 @@ module.exports = store
 function store (state, emitter) {
 
   state.user = {
-    // authenticated: false,
+    authenticated: false,
     loginModal: false,
     logoutBtn: false,
     signupModal: false
   }
-
 
 
   emitter.on('DOMContentLoaded', function () {
@@ -42,6 +41,7 @@ function store (state, emitter) {
             console.log("brilliant! you're auth'd!")
             emitter.emit("user:authenticated")
             emitter.emit("user:loginModal")
+            emitter.emit("db:find")
             emitter.emit("pushState", "create")
         })
       } else{
@@ -58,6 +58,7 @@ function store (state, emitter) {
         // Logged in
           console.log("logged in!")
           emitter.emit("user:authenticated")
+          emitter.emit("db:find")
           emitter.emit("pushState", "create")
         }).catch(e => {
           // Show login page (potentially with `e.message`)

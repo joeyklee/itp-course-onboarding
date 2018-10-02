@@ -51,7 +51,7 @@ function view (state, emit) {
         </div>
         <ul>
           ${state.syllabi.map( (syllabus) => html`
-              <li><a href="/edit/${syllabus._id}">${syllabus.title}</a></li>
+              <li><a href="/edit/${syllabus._id}" onclick=${() => emit("db:get", syllabus._id) }>${syllabus.title}</a></li>
             `)}
         </ul>
       </main>

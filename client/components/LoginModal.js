@@ -17,20 +17,14 @@ module.exports = function(name, state, emit){
     // console.log(formData.get("password"))
     // console.log("login clicked!")
     // console.log(e.target)
-    if(e.target.id == "login"){
-      emit("auth:login", formData)
-      // TODO: make sure only to redirect if auth'd
-      toggleLoginModal()
-    }
-
+    emit("auth:login", formData)
+    // TODO: make sure only to redirect if auth'd
+    toggleLoginModal()
   }
-
-
 
   let toggleLoginModal = function(){
     emit("user:loginModal")
   }
-
 
 
   return html`

@@ -15,25 +15,26 @@ function view (state, emit) {
     emit("user:loginModal")
   }
 
+  function onChange(e){
+    // console.log(e.target.textContent)
+      let d = e.target.textContent
+      let id = e.target.dataset.id
+      let property = e.target.dataset.property
+      emit("db:updateProperty", d, id, property )
+  }
+
+
   // let selectedData = state[state.params.featureType].filter( (feat) => feat.id === state.params.featureId )[0]
   console.log(state.params.featureId)
 
-  let selectedDataId = state.params.featureId
-
-  state.editing.syllabusId = selectedDataId
-
-  let selectedData = state.syllabi.filter( (feat) => feat._id === state.params.featureId )[0]
-
-  console.log(selectedData)
-
-  
   return html`
-  <body class="code w-100 h-100 bg-washed-yellow flex flex-column items-center">
+  <body onload=${() => emit("db:get", state.params.featureId)} class="code w-100 h-100 bg-washed-yellow flex flex-column items-center">
     ${state.cache(NavbarTop, "NavbarTop", state, emit)}
     <main class="w-100 h-auto mt2 mb2 pr4 pl4 dark-blue" style="flex-grow:1; max-width:1200px">
         <h1>Edit</h1>
-        <div id="syllabus">
-
+        <div id="syllabus" class="ba pa2">
+          <h1 contenteditable="true" data-property="title" onkeyup=${onChange}>${state.selectedSyllabus.title}</h1>
+          <p>${state.selectedSyllabus.description}</p>
         </div>
 
       </main>

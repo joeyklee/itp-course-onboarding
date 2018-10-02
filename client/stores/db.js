@@ -7,35 +7,30 @@ function store (state, emitter) {
 
   // get user's existing syllabi
   state.syllabi = [];
-
-  state.editing = {
-    syllabusId:""
-  }
-
-  // create placeholders for new Syllabus
-  state.newSyllabus = {
-    title: "",
-    description: "",
-    instructorName: "",
-    instructorUrl: "",
-    courseWebsite: "",
-    courseMaterial: []
-  }
+  state.selectedSyllabusId = ""
+  state.selectedSyllabus = {}
 
 
   emitter.on('DOMContentLoaded', function () {
 
-    emitter.on("db:editing", function(sid){
-      state.editing.syllabusId = sid
+      emitter.on('db:updateProperty', function (d, id, property) {
+      // NOTE: NOT efficient at all? there must be a better way to do this?
+      // Maybe it also is different using a different db.
+      state.selectedSyllabus[property] = d
+      // emitter.emit(state.events.RENDER)
 
-      // api.authenticate().then(() => {
-      //   api.service("syllabus")
-      //     .find({query:{_id:sid}})
-      //     .then( response => {
-      //         console.log(response)
-      //         return response
-      //     })
-      // })
+
+        api.authenticate().then(() => {
+          // update(id, data, params)
+          api.service("syllabus")
+          .update(state.selectedSyllabus._id, state.selectedSyllabus, {})
+          .then((res) => {
+            console.log(res)
+            emit("db:find")
+          })
+        })
+
+
     })
 
     emitter.on("db:add", function(){
@@ -112,8 +107,32 @@ function store (state, emitter) {
           // emitter.emit(state.events.RENDER);
     });
     // immediately call
-    emitter.emit("db:find")
+    // emitter.emit("db:find")
 
+    emitter.on("db:get", function(sid){
+
+        console.log("getting all!")
+
+        api.authenticate().then((res) => {
+
+          // api.service("users").find().then( (res) => {
+          //   console.log("currentUser", res)
+          // })
+          console.log("currentUser", res.userId)
+          api.service("syllabus")
+            .find({query:{userId:res.userId, _id:sid} } )
+            .then( (response) => {
+            console.log(response.data)
+            state.selectedSyllabusId = sid
+            state.selectedSyllabus = response.data[0]
+            // return response
+
+            emitter.emit(state.events.RENDER);
+          }).catch(err => {
+            return err
+          });
+        })
+    });
 
   })
 }
