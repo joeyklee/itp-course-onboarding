@@ -1,5 +1,7 @@
-# itp-syllabus-generator
-A Syllabus generator for the NYU ITP program
+# itp-course-verification
+(formerly the itp-syllabus-generator)
+
+This is a little web (consent) tool that asks instructors to submit links to the required components of structuring courses and creating syllabi. By actively submitting the links to courses and the materials required by ITP and NYU, it acts as a kind of digital consent process that ensures instructors are doing due diligence to make their courses accessible.
 
 
 ## About
@@ -8,7 +10,38 @@ The ITP tradition is to allow faculty and adjucts as much flexibility in their t
 
 This tool is meant to help faculty and adjuncts who are submitting new courses to ensure their syllabi fulfill the necessary (and helpful) criteria set by NYU and ITP and abide by the web accessibility standards and the mandatory NYU/Tisch School of Arts Statements on academic integrity, priciple, accessibility, counseling and wellness, and use of electronic devices.
 
-The goal is also to incorporate some of the handy tips and insights that faculty and adjuncts have garnered over the years such that new faculty and adjuncts can best design and plan their courses around the audience of students typically in the ITP and IMA program.
+The goal is to:
+1. continue to allow for instructors to use whatever platform they prefer to organize their courses while ensuring they fulfill the univeristy requirements for accessibility
+2. ensure "compliance" (oof that word gives me the shudders) and "good/healthy internet" practices through a digital consent process.
+
+Maybe a really nice bi-product of this is that people submitting URLs to their grading policies or class policies could be insightful or instructive and allow us to learn from the varieties of ways that people handle Codes of Conduct, Class expectations, etc.
+
+<!-- The goal is also to incorporate some of the handy tips and insights that faculty and adjuncts have garnered over the years such that new faculty and adjuncts can best design and plan their courses around the audience of students typically in the ITP and IMA program. -->
+
+## How it works
+
+### Instructor view
+
+* the instructor view is a (delightful) website with:
+  * instructions/onboarding:
+    * why we need to do this?
+    * why is this important?
+    * how it works?
+  * the form:
+    * paste in urls that "check off" the requirements for the required components
+    * paste in additional urls for supplementary info?
+    * confirm that course has been checked with web accessibility tool or otherwise structured using an approved tool.
+  * success:
+    * thank you!
+    * return % done / unique URL for submission
+
+* Allow for view of all courses that have been approved or confirmed?
+
+
+
+### Admin view
+
+* do we need admin functions?
 
 
 ## References
@@ -37,6 +70,10 @@ The goal is also to incorporate some of the handy tips and insights that faculty
 - [ITP Introduction to Computational Media](https://github.com/ITPNYU/ICM-2018) // Github
 - []()
 - []()
+
+## Consent process:
+- [A search for unexpected genetic heroes](https://www.goinvo.com/healthcare/mount-sinai/)
+-
 
 
 ## Tools to consider
