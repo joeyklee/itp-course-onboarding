@@ -43,7 +43,11 @@ The goal is also to incorporate some of the handy tips and insights that faculty
 - [GitPrint](https://gitprint.com/)
 -
 
-## Setup
+
+
+
+
+<!-- ## Setup
 
 ### run `mongodb`
 
@@ -73,7 +77,7 @@ then
 
 ```
 npm start
-```
+``` -->
 
 
 
