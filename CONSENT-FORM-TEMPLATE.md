@@ -10,3 +10,4 @@ I, the instructor of `url/to/course/` submit these urls which link to the follow
 By submitting this form, I am consenting that I have done my best and will strive to do my best to ensure that this submitted course and its content will be as accessible and wonderful as possible.
 
 <button>Submit!</button>
+  

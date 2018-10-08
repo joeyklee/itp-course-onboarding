@@ -20,6 +20,8 @@ Maybe a really nice bi-product of this is that people submitting URLs to their g
 
 ## How it works
 
+Some sketches here: https://github.com/joeyklee/itp-course-verification/issues/2
+
 ### Instructor view
 
 * the instructor view is a (delightful) website with:
