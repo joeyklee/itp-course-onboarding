@@ -1,4 +1,6 @@
 var html = require('choo/html')
+var NavbarTop = require('../components/NavbarTop')
+
 
 module.exports = view
 

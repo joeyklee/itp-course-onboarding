@@ -5,16 +5,10 @@ var TITLE = 'client - main'
 
 module.exports = view
 
-let circleStyle = `width:50px; height:50px; border-radius:50%;background-color:aqua;`
-let lineStyle = `position:relative;left:50%; width:14px; height:100%; background-color:tomato; display:flex; flex-direction:column; justify-content:center; align-items:center`
-let boxStyle = `width:200px; height:200px; border:2px solid black;`
+let circleStyle = `width:50px; height:50px; border-radius:50%;border:4px solid #111111; background-color:#FFFFFF;`
+let lineStyle = `position:relative; margin:0 auto; width:14px; height:100%; background-color:#111111; display:flex; flex-direction:column; justify-content:center; align-items:center`
+let boxStyle = `width:160px; height:160px; border:2px solid black;display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding: 2px; margin-right:4px; margin-top:4px;`
 
-let content = [
-  {title:"Tips and Notes", url:"/notes"},
-  {title:"Course/Syllabus Templates", url:"/templates"},
-  {title:"Validate & Submit Your Course", url:"/validator"},
-  {title:"Browse ITP Courses", url:"/browse"},
-]
 
 function contentSection(contentData){
   return html`
@@ -24,9 +18,15 @@ function contentSection(contentData){
             <div style="${circleStyle}"></div>
           </div>
       </div>
-      <div class="w-60-s w-80-m w-80-l mr2">
-          <h1><a class="link black hover-bg-light-blue" href="${contentData.url}">${contentData.title}</a></h1>
-          <div style=${boxStyle}></div>
+      <div class="w-60-s w-80-m w-80-l ml2 flex flex-column">
+          <h2><a class="link black hover-bg-light-blue" href="${contentData.url}">${contentData.title}</a></h2>
+          <div class="flex flex-row flex-wrap">
+          ${contentData.resources.map(item => html`
+            <div style=${boxStyle}>
+              <h3><a class="link black" href="${item.url}">${item.title}</a></h3>
+            </div>
+            `)}
+          </div>
       </div>
     </section>
   `
@@ -48,7 +48,7 @@ function view (state, emit) {
         </ol>
 
         <section class="w-100 flex flex-column">
-          ${content.map( item => contentSection(item)) }
+          ${state.content.map( item => contentSection(item)) }
         </section>
       </main>
     </body>
