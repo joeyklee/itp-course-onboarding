@@ -12,7 +12,7 @@ function NavbarTop(id, state, emit){
 
   return html`
     <nav class="flex flex-row justify-center flex-wrap ba br2">
-      <a class="${currentPage('/')} link black hover-bg-light-blue ml2" tabindex="1" href="/">intro</a>
+      <a class="${currentPage('')} link black hover-bg-light-blue ml2" tabindex="1" href="/">intro</a>
       <a class="${currentPage('home')} link black hover-bg-light-blue ml2" tabindex="2" href="/home">→ home</a>
       <a class="${currentPage('notes')} link black hover-bg-light-blue ml2" tabindex="3" href="/notes">→ tips</a>
       <a class="${currentPage('templates')} link black hover-bg-light-blue ml2" tabindex="4" href="/templates">→ templates</a>
