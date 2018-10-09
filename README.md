@@ -68,7 +68,7 @@ Some sketches here: https://github.com/joeyklee/itp-course-verification/issues/2
 
 ## Example Syllabus References
 
-- [Tom Igoe's Physical Computing Course](https://itp.nyu.edu/physcomp/itp/syllabus/) // Wordpress
+  - [Tom Igoe's Physical Computing Course](https://itp.nyu.edu/physcomp/itp/syllabus/) // Wordpress
 - [ITP Introduction to Computational Media](https://github.com/ITPNYU/ICM-2018) // Github
 - []()
 - []()

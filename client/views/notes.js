@@ -5,13 +5,6 @@ var LinksFromData = require('../components/LinksFromData')
 
 module.exports = view
 
-// function scrollToView(id){
-//   let el = document.querySelector(id);
-//   el.scrollIntoView();
-// }
-
-
-
 function view (state, emit) {
   return html`
     <body class="code lh-copy w-100 h-100 center">
@@ -24,14 +17,3 @@ function view (state, emit) {
     </body>
   `
 }
-
-
-/**
-
-<section class="w-100 flex flex-column">
-  ${state.content.filter( item => item.url == "/notes")[0].resources.map( item => html`
-      <div id='${item.url.split("/")[1]}'>${item.title}</div>
-    `)}
-</section>
-
- */
