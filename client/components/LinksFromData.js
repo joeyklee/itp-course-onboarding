@@ -2,6 +2,14 @@
 var html = require('choo/html')
 
 function showProperties(resourceProps){
+  /**
+  nyu_statements
+  course_url
+  open_access
+  course_policies
+  web_accessibility_checked
+  web_accessibility_score
+   */
   if(resourceProps != undefined){
     return html`
     <div class="flex flex-column ml4">
@@ -10,22 +18,12 @@ function showProperties(resourceProps){
       <p class="ma0">Valid Course URL: ${resourceProps.course_url == true ? "✅" : "⭕️" }</p>
       <p class="ma0">Open Courseware: ${resourceProps.open_access == true ? "✅" : "⭕️" }</p>
       <p class="ma0">Course Policies: ${resourceProps.course_policies == true ? "✅" : "⭕️" }</p>
-      <p class="ma0">Web Accessibility Check: ${resourceProps.web_accessibility_url == "" ? "No Link Submitted" : html`<a href='resourceProps.web_accessibility_url'>Check URL</a>` }</p>
+      <p class="ma0">Web Accessibility Checked: ${resourceProps.web_accessibility_checked == true ? "✅" : "⭕️"}</p>
+      <p class="ma0">Web Accessibility URL: ${resourceProps.web_accessibility_url == "" ? "No Link Submitted" : html`<a href='resourceProps.web_accessibility_url'>Check URL</a>` }</p>
     </div>
     `
   }
 }
-
-/**
-
-nyu_statements
-course_url
-open_access
-course_policies
-web_accessibility_url
-web_accessibility_score
-
- */
 
 
 function LinksFromData(id, state, emit, url){
@@ -47,22 +45,5 @@ function LinksFromData(id, state, emit, url){
   `
 }
 
-// class LinksFromData extends Component {
-//   constructor (id, state, emit) {
-//     super(id)
-//     this.local = state.components[id] = {}
-//   }
-//
-//   createElement () {
-//     return html`
-//       <div>
-//       </div>
-//     `
-//   }
-//
-//   update () {
-//     return true
-//   }
-// }
 
 module.exports = LinksFromData

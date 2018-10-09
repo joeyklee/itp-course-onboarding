@@ -44,6 +44,7 @@ function store (state, emitter) {
             open_access:true,
             course_policies: true,
             web_accessibility_url: "",
+            web_accessibility_checked: false,
             web_accessibility_score: 0.0
           }
         },
@@ -55,6 +56,7 @@ function store (state, emitter) {
             open_access:true,
             course_policies: true,
             web_accessibility_url: "",
+            web_accessibility_checked: false,
             web_accessibility_score: 0.0
           }
         },
