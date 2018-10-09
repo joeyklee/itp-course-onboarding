@@ -64,6 +64,8 @@ function store (state, emitter) {
     ]},
   ]
 
+  
+
   emitter.on('DOMContentLoaded', function () {
 
     emitter.on('content:get', function (count) {
