@@ -1,7 +1,9 @@
-# itp-course-verification
-(formerly the itp-syllabus-generator)
+# itp-course-onboarding
+(formerly the itp-syllabus-generator, itp-course-verification)
 
-This is a little web (consent) tool that asks instructors to submit links to the required components of structuring courses and creating syllabi. By actively submitting the links to courses and the materials required by ITP and NYU, it acts as a kind of digital consent process that ensures instructors are doing due diligence to make their courses accessible.
+This is a little web site that is meant to help all instructors to build better and more accessible courses. The site just links to helpful tips and course and syllabus templates as well as offers a place for instructors to validate their course websites to make sure they meet web accessibility standards and NYU/ITP guidelines for content. 
+
+<s>This is a little web (consent) tool that asks instructors to submit links to the required components of structuring courses and creating syllabi. By actively submitting the links to courses and the materials required by ITP and NYU, it acts as a kind of digital consent process that ensures instructors are doing due diligence to make their courses accessible.</s>
 
 
 ## About

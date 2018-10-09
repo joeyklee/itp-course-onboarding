@@ -16,7 +16,7 @@ function store (state, emitter) {
     ]},
     {title:"Course/Syllabus Templates", url:"/templates", resources:[
       {title:"Course Templates & How-To's", description:"", url:"/templates#course-templates", resources:[
-        {title:"Github Course Template", url:""},
+        {title:"Github Course Template", url:"https://github.com/joeyklee/itp-course-template"},
         {title:"Wordpress How-to", url:""},
         {title:"Google Classroom How-to", url:""}
       ]},
@@ -31,8 +31,8 @@ function store (state, emitter) {
         {title:"Introduction to Computational Media @ ITP", url:"https://github.com/ITPNYU/ICM-2018"},
       ]}
     ]},
-    {title:"Validate & Submit Your Course", url:"/validate", resources:[
-      {title:"Validator App", description:"", url:"/validate"}
+    {title:"Submit Your Course", url:"/submit", resources:[
+      {title:"Submit Course Materials", description:"", url:"/submit"}
     ]},
     {title:"Browse ITP Courses", url:"/browse", resources:[
       {title:"Open ITP Courses", description:"", url:"/browse", resources:[
@@ -64,7 +64,7 @@ function store (state, emitter) {
     ]},
   ]
 
-  
+
 
   emitter.on('DOMContentLoaded', function () {
 

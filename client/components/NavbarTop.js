@@ -3,14 +3,21 @@ var html = require('choo/html')
 
 
 function NavbarTop(id, state, emit){
+
+  function currentPage(linkRoute){
+    console.log(state.route)
+    let cleanedRoute = state.route.split("/")[0]
+    return cleanedRoute == linkRoute ? "bg-yellow" : ""
+  }
+
   return html`
-    <nav>
-      <a href="/">intro</a>
-      <a href="/home">→ home</a>
-      <a href="/notes">→ tips &notes</a>
-      <a href="/templates">→ templates</a>
-      <a href="/validate">→ validator</a>
-      <a href="/browse">→ browse courses</a>
+    <nav class="flex flex-row justify-center flex-wrap ba br2">
+      <a class="${currentPage('/')} link black hover-bg-light-blue ml2" tabindex="1" href="/">intro</a>
+      <a class="${currentPage('home')} link black hover-bg-light-blue ml2" tabindex="2" href="/home">→ home</a>
+      <a class="${currentPage('notes')} link black hover-bg-light-blue ml2" tabindex="3" href="/notes">→ tips</a>
+      <a class="${currentPage('templates')} link black hover-bg-light-blue ml2" tabindex="4" href="/templates">→ templates</a>
+      <a class="${currentPage('submit')} link black hover-bg-light-blue ml2" tabindex="5" href="/submit">→ submit </a>
+      <a class="${currentPage('browse')} link black hover-bg-light-blue ml2" tabindex="6" href="/browse">→ browse</a>
     </nav>
   `
 }
