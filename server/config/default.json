@@ -1,0 +1,34 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": "mongodb://localhost:27017/itpcourses",
+  "authentication": {
+    "secret": "9040a2857917f53dac06de9842cc8551bc29c1d00b14b2a00ee0947c752fccefc3d3a256573e730eb2469e5cc8ed82d19e941b16a51f1390002977d2d1832af2391c0f47f2a1dde13ab367ecd6248af5f168720b6e781bfbb08ddd787c54a9086f38bc63e8f919f8a6a8487306ecadb4677ba69c98b2f1c6ebd02c29ae1693fb342fb716d901d8fea62470f0c4887a030c63ebef99bd391711c6cd13bcea0d6f2a331be9e3e97d073f7bfbeb4644df8822bad1e4de5d75389e9ab97d512a2ff16529401865b9821291b315c4e8e462fb15653e266ae451c9a8ca8bcc48d5ce84082ede6193e0e6e279f69203afa7ed30bb88abb5b2a9c914d2accf9c1562854e",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
+}
