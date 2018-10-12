@@ -1,4 +1,5 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
+const populateSection = require('../../hooks/populate-section');
 
 module.exports = {
   before: {
@@ -7,7 +8,7 @@ module.exports = {
     get: [],
     create: [],
     update: [],
-    patch: [],
+    patch: [populateSection()],
     remove: []
   },
 

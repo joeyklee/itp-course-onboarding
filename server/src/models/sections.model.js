@@ -9,7 +9,7 @@ module.exports = function (app) {
     title: { type: String, required: false },
     description: { type: String, required: false },
     url: { type: String, required: false },
-    resources:{ type: [String], default:[], required: false}
+    resources: [{ type: Schema.Types.ObjectId, ref: 'resources' }]
   }, {
     timestamps: true
   });
