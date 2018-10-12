@@ -26,7 +26,8 @@ module.exports = function (options = {}) {
     let section = await Model
       .findOneAndUpdate(
         {_id:sectionId},
-        {$addToSet:{resources:resourceId}},
+        {$push:{resources:resourceId}},
+        // {$addToSet:{resources:resourceId}},
         {new:true}
     ).populate('resources').exec();
 
