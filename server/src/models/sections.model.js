@@ -2,6 +2,9 @@
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
+const uniqueArrayPlugin = require('mongoose-unique-array');
+
+
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
@@ -14,5 +17,7 @@ module.exports = function (app) {
     timestamps: true
   });
 
+  // Add the unique array plugin
+  sections.plugin(uniqueArrayPlugin);
   return mongooseClient.model('sections', sections);
 };

@@ -6,8 +6,8 @@ module.exports = {
     all: [ ],
     find: [],
     get: [],
-    create: [],
-    update: [],
+    create: [populateSection()],
+    update: [populateSection()],
     patch: [populateSection()],
     remove: []
   },
