@@ -1,13 +1,14 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
-
+const populateList = require('../../hooks/populate-list');
+// authenticate('jwt')
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
+    all: [ ],
     find: [],
     get: [],
     create: [],
-    update: [],
-    patch: [],
+    update: [populateList()],
+    patch: [populateList()],
     remove: []
   },
 

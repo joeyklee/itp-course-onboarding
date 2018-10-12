@@ -6,17 +6,11 @@ module.exports = function (options = {}) {
   return async context => {
 
     // grab the data from the context
-    const {data} = context;
-
-    // if the data contains no text
-    // if(!data.text){
-    //   throw new Error("a message must have text!")
-    // }
+    // const {data} = context;
 
     // the auth'd user
     // const user = context.params.user;
 
-    // let resourceId = context.data['$push'].resources;
     let resourceId = context.data.resourceId;
     let sectionId = context.params.query._id;
 
@@ -30,7 +24,6 @@ module.exports = function (options = {}) {
         // {$addToSet:{resources:resourceId}},
         {new:true}
     ).populate('resources').exec();
-
 
     context.result = section;
     context.data = section;

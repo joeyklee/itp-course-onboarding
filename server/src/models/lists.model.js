@@ -9,7 +9,7 @@ module.exports = function (app) {
     title: { type: String, required: false },
     description: { type: String, required: false },
     url: { type: String, required: false },
-    sections:{ type: [String], default:[], required: false}
+    sections:[{ type: Schema.Types.ObjectId, ref: 'sections', unique:true }]
   }, {
     timestamps: true
   });
